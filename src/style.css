@@ -1,0 +1,168 @@
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main .sidebar {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  padding: 80px 30px 30px 40px;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: monospace;
+  width: 340px;
+}
+
+.main .sidebar .boundary {
+  height: 100%;
+  background-image: linear-gradient(90deg, rgba(25, 25, 25, 0.15), transparent);
+  width: 15px;
+  position: absolute;
+  right: -15px;
+  pointer-events: none;
+  top: 0;
+}
+
+.main .sidebar .name {
+  font-size: 50px;
+}
+
+.main .sidebar .location {
+  margin-top: 15px;
+}
+
+.main .sidebar .location img {
+  width: 20px;
+}
+
+.main .sidebar .job-title {
+  font-size: 14px;
+}
+
+.main .sidebar .connect {
+  margin-top: 10px;
+}
+
+.main .sidebar .connect img {
+  width: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.main .sidebar .connect img:hover {
+  transform: scale(1.05);
+}
+
+.main .content {
+  margin-left: 340px;
+}
+
+.gallery {
+  width: calc(100vw - 340px);
+}
+
+.gallery .gallery-item {
+  position: relative;
+  max-height: 300px;
+  width: calc(33.32% - 60px);
+  display: inline-block;
+  margin: 30px;
+  box-sizing: border-box;
+  box-shadow: rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0px 30px 60px -30px,
+    rgb(10 37 64 / 35%) 0px -2px 6px 0px inset;
+}
+
+.gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s;
+}
+
+.gallery .gallery-item .overlay {
+  font-family: monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+.gallery .gallery-item img:hover {
+  transform: scale(1.02);
+}
+
+.gallery .gallery-item .overlay p {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.gallery .gallery-item .overlay h2 {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: fit-content;
+  margin: auto;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.gallery .gallery-item .overlay img {
+  height: 20px;
+  width: auto;
+  padding: 0 5px;
+}
+
+@media screen and (max-width: 1600px) {
+  .gallery .gallery-item {
+    width: calc(49.99% - 60px);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .gallery .gallery-item {
+    width: calc(100% - 80px);
+    margin: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main .sidebar {
+    width: 100%;
+    position: relative;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .gallery .gallery-item {
+    margin: 15px 0;
+    width: 100%;
+  }
+
+  .main .sidebar .boundary {
+    display: none;
+  }
+
+  .main .content {
+    margin-left: 0px;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .gallery {
+    width: 100%;
+  }
+
+  .gallery .gallery-item .overlay {
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0);
+  }
+}
