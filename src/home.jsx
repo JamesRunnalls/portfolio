@@ -66,7 +66,7 @@ class Home extends Component {
                   key={p.title}
                 >
                   <div className="gallery-item">
-                    <img src={p.img} alt={p.title} />
+                    <img src={p.img} alt={p.title} className="galley-img" />
                     <div className="overlay">
                       <div className="overlay-inner">
                         <h2>{p.title}</h2>
